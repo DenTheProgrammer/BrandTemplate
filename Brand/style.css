@@ -594,6 +594,7 @@ input[type="search"] {
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-left: 30px;
 }
 
 .upperFooter li {
@@ -605,6 +606,7 @@ input[type="search"] {
 .upperFooter ul {
     margin-top: 41px;
     line-height: 47px;
+    margin-left: 30px;
 }
 
 .upperFooter p {
@@ -859,7 +861,11 @@ input[type="search"] {
     }
         /*  end burger  */
     
-    
+
+    .lowerFooter .smallerWrapper {
+        justify-content: space-around;
+        flex-wrap: wrap-reverse;
+    }
 }
 
 
@@ -905,3 +911,5 @@ input[type="search"] {
         color: #b1afaf;
     }
 }
+
+
