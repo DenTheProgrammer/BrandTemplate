@@ -75,11 +75,12 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
-	/*    flex-wrap: wrap;*/
+	  
 }
 
 .logo {
 	display: flex;
+	height: 51px;
 }
 
 
@@ -101,7 +102,6 @@ header {
 
 .logoAndSearch {
 	display: flex;
-	/*    flex-wrap: wrap;*/
 }
 
 .search {
@@ -357,7 +357,7 @@ input[type="search"] {
 	padding: 16px 19px;
 }
 .category h3{
-	color:  #222222;
+	color:  #222;
 font-size: 18px;
 font-weight: 900;
 }
@@ -729,7 +729,36 @@ font-weight: 900;
 /*-------------------------------@MEDIA-------------------------------*/
 
 @media all and (max-width: 917px) {
-
+.headerMain {
+		height: 180px;
+	}
+	
+	.headerMain .smallerWrapper{
+		flex-direction: column;
+	
+	}
+	.logoAndSearch {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		
+	}
+	.logoAndSearch .logo {
+		align-self: flex-start;
+		margin-top: 25px;
+	}
+	.logoAndSearch .logo img{
+		height: 51px;
+		
+	}
+	
+	.logoAndSearch input{
+		max-width: 50%;
+	}
+	.logoAndSearch .search{
+		align-self: center;
+		margin-top: 10px
+	}
 	.reviewAndSubscribe .smallerWrapper {
 		flex-direction: column;
 		justify-content: center;
@@ -738,13 +767,16 @@ font-weight: 900;
 	.review {
 		flex-wrap: wrap;
 	}
-
+	
 }
 
 @media all and (max-width: 766px) {
-	header {
-		
+	
+	.category .text h3{
+		font-size: 3vw;
 	}
-
-
+	.category .text h2{
+		font-size: 4vw;
+	}
+	
 }
