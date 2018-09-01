@@ -82,7 +82,7 @@ header {
 	display: flex;
 }
 
-.logo img {}
+
 
 .logo h1 {
 	line-height: 51px;
@@ -133,9 +133,57 @@ header {
 	font-weight: 300;
 	line-height: 32px;
 	text-align: center;
-	
-	
+
+
 	position: relative;
+}
+
+.dropdown {
+	position: absolute;
+	top: 38px;
+	left: 0px;
+	display: none;
+	width: 262px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	z-index: 10;
+	text-align: left;
+	padding: 15px;
+	font-family: Lato;
+}
+
+.browseBtn:hover .dropdown {
+	display: block;
+}
+
+.dropdown h3 {
+	font-size: 14px;
+	line-height: 32px;
+	letter-spacing: 0.4px;
+	color: #232323;
+}
+
+.dropdown ul {
+	font-size: 14px;
+	line-height: 28px;
+	letter-spacing: 0.4px;
+	color: #4f4f4f;
+}
+
+.hr {
+	width: 236px;
+	height: 1px;
+	background-color: #e8e8e8;
+
+}
+
+.dropdown:before {
+	content: "";
+	border: solid 20px transparent;
+	border-bottom: solid 20px white;
+	position: relative;
+	top: -38px;
+	left: 31px;
 }
 
 input[type="search"] {
@@ -165,6 +213,7 @@ input[type="search"] {
 	display: flex;
 	align-items: center;
 }
+
 .accountButton {
 	background-color: #f16d7f;
 	width: 130px;
@@ -253,81 +302,59 @@ input[type="search"] {
 
 /*-------------------------------CATEGORY-------------------------------*/
 
-.category .forMen,
-.category .forKids {
-	height: 542px;
+.category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.categoryLeft,.categoryRight{
+    display: flex;
+    flex-direction: column;
 }
 
-.category .accesories,
-.category .women {
-	background-color: #ddddd4;
-	height: 261px;
+.category img{
+    max-width: 100%;
+    
 }
 
-.category .women,
-.category .forMen,
-.category .forKids,
-.category .accesories {
-	width: 560px;
-	margin: 20px 10px;
+.category a{
+     position: relative;
+    overflow: hidden;
+   max-width: 560px;
+    margin: 20px;
 }
 
-.darker {
-	height: 100%;
+
+.category a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: inherit;
+    width: inherit;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 2;
 }
 
-.darker:hover {
-	background-color: rgba(0, 0, 0, .5);
+.category a:hover::before {
+    opacity: 1;
+}
+.category a:hover img {
+    transform: scale(1.1);
 }
 
-.category {
-	margin: 100px 0;
-	min-height: 469px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.category h3 {
-	color: #222222;
-	font-size: 18px;
-}
-
-.category h2 {
-	color: #f16d7f;
-	font-size: 30px;
-}
-
-.category h3,
-.category h2 {
-	font-weight: 900;
-	text-transform: uppercase;
-}
-
-.categoryText {
-	background-color: #ffffff;
-	position: relative;
-	top: 26px;
-	z-index: 2;
-	display: inline-block;
-	padding: 16px 20px;
-}
-
-.forMen {
-	background: url(img/formen.png) no-repeat center;
-
-}
-
-.accesories {
-	background: url(img/accesories.png) no-repeat center;
-}
-
-.women {
-	background: url(img/women.png) no-repeat center;
-}
-
-.forKids {
-	background: url(img/forkids.png) no-repeat center;
+.category  .text{
+    position: absolute;
+    color: darkblue;
+    z-index: 2;
+    background: white;
+    top: 20%;
+    height: 15%;
+    width: 25%;
+    font-size: 30px;
 }
 
 
@@ -694,73 +721,22 @@ input[type="search"] {
 /*-------------------------------@MEDIA-------------------------------*/
 
 @media all and (max-width: 917px) {
-	
-	.reviewAndSubscribe .smallerWrapper {
 
+	.reviewAndSubscribe .smallerWrapper {
 		flex-direction: column;
 		justify-content: center;
-
-
 	}
 
-	.category .women,
-	.category .forMen,
-	.category .forKids,
-	.category .accesories {
-
-		margin: 20px 10px;
-	}
 	.review {
-
 		flex-wrap: wrap;
-
 	}
-}
-
-.dropdown {
-	position: absolute;
-	top: 38px;
-	left: 0px;
-	display: none;
-	 width: 262px;
-  border-radius: 5px;
-  background-color: #ffffff;
-	z-index: 10;
-	text-align: left;
-	padding: 15px;
-	font-family: Lato;
-}
-
-.browseBtn:hover .dropdown {
-	display: block;
-}
-
-.dropdown h3{
-	 font-size: 14px;
-  line-height: 32px;
-  letter-spacing: 0.4px;
-  color: #232323;
-}
-
-.dropdown ul{
-	 font-size: 14px;
-  line-height: 28px;
-  letter-spacing: 0.4px;
-  color: #4f4f4f;
-}
-
-.hr {
-  width: 236px;
-  height: 1px;
-  background-color: #e8e8e8;
 
 }
 
-.dropdown:before {
-	content: "";
-	border: solid 20px transparent;
-	border-bottom: solid 20px white;
-	position: relative;
-	top: -38px;
-	left: 31px;
+@media all and (max-width: 766px) {
+	header {
+		
+	}
+
+
 }
