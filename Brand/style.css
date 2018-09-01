@@ -313,7 +313,7 @@ input[type="search"] {
 .slider {
     min-height: 614px;
     background: #e8e8e8 url(img/muzhik.png) no-repeat center;
-
+    margin-bottom: 20px;
 
 }
 
@@ -604,9 +604,9 @@ input[type="search"] {
 }
 
 .upperFooter ul {
-    margin-top: 41px;
+    margin: 41px 30px;
     line-height: 47px;
-    margin-left: 30px;
+   
 }
 
 .upperFooter p {
@@ -786,6 +786,7 @@ input[type="search"] {
 /*-------------------------------@MEDIA-------------------------------*/
 
 @media all and (max-width: 917px) {
+
     .headerMain {
         height: 200px;
     }
