@@ -352,12 +352,20 @@ input[type="search"] {
     z-index: 2;
     background: white;
     top: 20%;
-    height: 15%;
-    width: 25%;
     font-size: 30px;
+	text-transform: uppercase;
+	padding: 16px 19px;
 }
-
-
+.category h3{
+	color:  #222222;
+font-size: 18px;
+font-weight: 900;
+}
+.category h2{
+	color:  #f16d7f;
+font-size: 30px;
+font-weight: 900;
+}
 /*-------------------------------FEATURED-------------------------------*/
 
 .featured h2,
